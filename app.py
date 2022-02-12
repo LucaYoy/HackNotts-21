@@ -36,7 +36,8 @@ def main():
     def returnUserPage():
         return open("./static/user.html") \
                 .read() \
-                .format(monthlyBudget=account.monthlyBudget)
+                .format(monthlyBudget=account.monthlyBudget, \
+                        monthlySoFar=account.monthlySoFar)
 
     # udpate budgets
     @app.route("/update")
@@ -48,8 +49,7 @@ def main():
     @app.route("/test")
     def progressBar():
         return open("./static/progress_bar.html") \
-                .read() \
-                .format(dd=12)
+                .read()
         pass
 
     app.run()
