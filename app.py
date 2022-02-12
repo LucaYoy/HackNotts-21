@@ -28,14 +28,14 @@ def main():
     # admin page
     @app.route("/admin")
     def returnAdminPage():
-        return open("./static/admin_page.html") \
+        return open("./static/admin.html") \
                 .read() \
                 .format(var1="admin page")
 
     # user page
     @app.route("/user")
     def returnUserPage():
-        return open("./static/user_page.html") \
+        return open("./static/user.html") \
                 .read() \
                 .format(var1="user page")
 
@@ -48,7 +48,7 @@ def main():
     # udpate variables
     @app.route("/update")
     def updateAccountBudget():
-        pass
+        return open("./static/home.html").read()
 
     app.run()
 
