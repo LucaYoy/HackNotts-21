@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background:  linear-gradient(120deg,yellow,orange);
+}
+
+header, form {
+	min-height: 20vh;
+}
+
+header {
+	padding: 20px;
+	font-size: 2rem;
+}
+
+form {
+	display: grid;
+	justify-content: center;
+}
+
+
+
