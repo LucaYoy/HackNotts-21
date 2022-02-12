@@ -49,7 +49,8 @@ def main():
     @app.route("/test")
     def progressBar():
         return open("./static/progress_bar.html") \
-                .read()
+                .read() \
+                .format(var2=80)
         pass
 
     app.run()
