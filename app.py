@@ -38,11 +38,11 @@ def main():
                 .read() \
                 .format(monthlyBudget=account.monthlyBudget, \
                         monthlySoFar=account.getMonthlySoFar(), \
-                        rentPercent=account.getRentPercent())
-                        # foodPercent=account.getFoodPercent(), \
-                        # billsPercent=account.getBillsPercent(), \
-                        # transportPercent=account.getTransportPercent(), \
-                        # miscPercent=account.getMiscPercent())
+                        rentPercent=account.getRentPercent(), \
+                        foodPercent=account.getFoodPercent(), \
+                        billsPercent=account.getBillsPercent(), \
+                        transportPercent=account.getTransportPercent(), \
+                        miscPercent=account.getMiscPercent())
 
     def isNotString(number):
         return type(number) != str
