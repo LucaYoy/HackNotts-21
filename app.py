@@ -37,8 +37,8 @@ def main():
         return open("./static/user.html") \
                 .read() \
                 .format(monthlyBudget=account.monthlyBudget, \
-                        monthlySoFar=account.monthlySoFar))
-                        # rentPercent=account.getRentPercent(), \
+                        monthlySoFar=account.getMonthlySoFar(), \
+                        rentPercent=account.getRentPercent())
                         # foodPercent=account.getFoodPercent(), \
                         # billsPercent=account.getBillsPercent(), \
                         # transportPercent=account.getTransportPercent(), \
@@ -57,18 +57,19 @@ def main():
             account.monthlySoFar = float(request.args.get("balance"))
 
         if request.args.get("rent") != "":
-            account.rentBudget = float(request.args.get("rent"))
+            account.rentSoFar = float(request.args.get("rent"))
         
         if request.args.get("food") != "":
-            account.foodBudget = float(request.args.get("food"))
+            account.foodSoFar = float(request.args.get("food"))
         
         if request.args.get("bills") != "":
-            account.billsBudget = float(request.args.get("bills"))
+            account.billsSoFar = float(request.args.get("bills"))
         
         if request.args.get("transport") != "":
-            account.transportBudget = float(request.args.get("transport"))
+            account.transportSoFar = float(request.args.get("transport"))
         
-        account.miscBudget = account.getMiscBudget()
+        if request.args.get("misc") != "":
+            account.miscSoFar = float(request.args.get("misc"))
 
         return redirect("http://127.0.0.1:5000/", code=302)
 
