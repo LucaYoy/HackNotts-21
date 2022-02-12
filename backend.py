@@ -2,7 +2,7 @@
 
 class Account:
 
-    monthlyBudget = 0 # total budget per month
+    monthlyBudget = 1000 # total budget per month
     monthlySoFar = 0
 
     rentBudget = 0

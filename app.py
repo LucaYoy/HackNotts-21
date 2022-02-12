@@ -29,26 +29,28 @@ def main():
     @app.route("/admin")
     def returnAdminPage():
         return open("./static/admin.html") \
-                .read() \
-                .format(var1="admin page")
+                .read()
 
     # user page
     @app.route("/user")
     def returnUserPage():
         return open("./static/user.html") \
                 .read() \
-                .format(var1="user page")
+                .format(monthlyBudget=account.monthlyBudget)
 
-
-    # login page
-    @app.route("/login")
-    def returnAccountPage():
-        pass
-
-    # udpate variables
+    # udpate budgets
     @app.route("/update")
     def updateAccountBudget():
         return redirect("http://127.0.0.1:5000/", code=302)
+
+
+    # progress bar test
+    @app.route("/test")
+    def progressBar():
+        return open("./static/progress_bar.html") \
+                .read() \
+                .format(dd=12)
+        pass
 
     app.run()
 
