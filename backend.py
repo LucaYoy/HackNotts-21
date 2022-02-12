@@ -5,19 +5,19 @@ class Account:
     monthlyBudget = 1000 # total budget per month
     monthlySoFar = 0
 
-    rentBudget = 0
+    rentBudget = 200
     rentSoFar = 0
 
-    foodBudget = 0
+    foodBudget = 200
     foodSoFar = 0
 
-    billsBudget = 0 # gas, electricity, internet, phone, etc.
+    billsBudget = 200 # gas, electricity, internet, phone, etc.
     billsSoFar = 0
 
-    transportBudget = 0
+    transportBudget = 200
     transportSoFar = 0
 
-    miscBudget = 0 # subscriptions, etc.
+    miscBudget = 200 # subscriptions, etc.
     miscSoFar = 0
 
     warningThreshold = 0.9
