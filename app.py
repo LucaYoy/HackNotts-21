@@ -48,7 +48,7 @@ def main():
     # udpate variables
     @app.route("/update")
     def updateAccountBudget():
-        return open("./static/home.html").read()
+        return redirect("http://127.0.0.1:5000/", code=302)
 
     app.run()
 
