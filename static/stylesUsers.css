@@ -1,3 +1,7 @@
+body {
+	background: linear-gradient(120deg,yellow,orange);
+}
+
 h2 {
 	display: inline;
 	margin: 0;
