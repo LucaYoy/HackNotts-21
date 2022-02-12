@@ -27,6 +27,17 @@ def main():
                 .read() \
                 .format(var1="user page")
 
+
+    # login page
+    @app.route("/login")
+    def returnAccountPage():
+        pass
+
+    # udpate variables
+    @app.route("/update")
+    def updateAccountBudget():
+        pass
+
     app.run()
 
 

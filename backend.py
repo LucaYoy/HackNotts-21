@@ -11,7 +11,7 @@ class Account:
     foodBudget = 0
     foodSoFar = 0
 
-    billsBudget = 0 # gass, electricity, internet, phone, etc.
+    billsBudget = 0 # gas, electricity, internet, phone, etc.
     billsSoFar = 0
 
     transportBudget = 0
