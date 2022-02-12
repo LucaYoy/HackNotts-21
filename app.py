@@ -37,16 +37,39 @@ def main():
         return open("./static/user.html") \
                 .read() \
                 .format(monthlyBudget=account.monthlyBudget, \
-                        monthlySoFar=account.monthlySoFar, \
-                        rentPercent=account.getRentPercent(), \
-                        foodPercent=account.getFoodPercent(), \
-                        billsPercent=account.getBillsPercent(), \
-                        transportPercent=account.getTransportPercent(), \
-                        miscPercent=account.getMiscPercent())
+                        monthlySoFar=account.monthlySoFar))
+                        # rentPercent=account.getRentPercent(), \
+                        # foodPercent=account.getFoodPercent(), \
+                        # billsPercent=account.getBillsPercent(), \
+                        # transportPercent=account.getTransportPercent(), \
+                        # miscPercent=account.getMiscPercent())
+
+    def isNotString(number):
+        return type(number) != str
 
     # udpate budgets
     @app.route("/update")
     def updateAccountBudget():
+        if request.args.get("monthly-budget") != "":
+            account.monthlyBudget = float(request.args.get("monthly-budget"))
+        
+        if request.args.get("balance") != "":
+            account.monthlySoFar = float(request.args.get("balance"))
+
+        if request.args.get("rent") != "":
+            account.rentBudget = float(request.args.get("rent"))
+        
+        if request.args.get("food") != "":
+            account.foodBudget = float(request.args.get("food"))
+        
+        if request.args.get("bills") != "":
+            account.billsBudget = float(request.args.get("bills"))
+        
+        if request.args.get("transport") != "":
+            account.transportBudget = float(request.args.get("transport"))
+        
+        account.miscBudget = account.getMiscBudget()
+
         return redirect("http://127.0.0.1:5000/", code=302)
 
 

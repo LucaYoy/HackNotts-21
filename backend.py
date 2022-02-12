@@ -39,4 +39,7 @@ class Account:
 
     def getMiscPercent(self):
         return self.miscSoFar / self.miscBudget * 100
+
+    def getMiscBudget(self):
+        return self.monthlyBudget - self.rentBudget - self.foodBudget - self.billsBudget - self.transportBudget
     
