@@ -5,19 +5,19 @@ class Account:
     monthlyBudget = 1000 # total budget per month
     monthlySoFar = 0
 
-    rentBudget = 200
+    rentBudget = 0.2 * monthlyBudget
     rentSoFar = 0
 
-    foodBudget = 200
+    foodBudget = 0.2 * monthlyBudget
     foodSoFar = 0
 
-    billsBudget = 200 # gas, electricity, internet, phone, etc.
+    billsBudget = 0.2 * monthlyBudget # gas, electricity, internet, phone, etc.
     billsSoFar = 0
 
-    transportBudget = 200
+    transportBudget = 0.2 * monthlyBudget
     transportSoFar = 0
 
-    miscBudget = 200 # subscriptions, etc.
+    miscBudget = 0.2 * monthlyBudget # subscriptions, etc.
     miscSoFar = 0
 
     warningThreshold = 0.9
@@ -40,6 +40,6 @@ class Account:
     def getMiscPercent(self):
         return self.miscSoFar / self.miscBudget * 100
 
-    def getMiscBudget(self):
-        return self.monthlyBudget - self.rentBudget - self.foodBudget - self.billsBudget - self.transportBudget
+    def getMonthlySoFar(self):
+        return self.monthlyBudget - self.rentSoFar - self.foodSoFar - self.billsSoFar - self.transportSoFar - self.miscSoFar
     
