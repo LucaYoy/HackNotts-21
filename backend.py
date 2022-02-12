@@ -25,4 +25,18 @@ class Account:
     def __init__(self):
         pass
 
+    def getRentPercent(self):
+        return self.rentSoFar / self.rentBudget * 100
+
+    def getFoodPercent(self):
+        return self.foodSoFar / self.foodBudget * 100
+
+    def getBillsPercent(self):
+        return self.billsSoFar / self.billsBudget * 100
+
+    def getTransportPercent(self):
+        return self.transportSoFar / self.transportBudget * 100
+
+    def getMiscPercent(self):
+        return self.miscSoFar / self.miscBudget * 100
     

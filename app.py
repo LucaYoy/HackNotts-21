@@ -37,7 +37,12 @@ def main():
         return open("./static/user.html") \
                 .read() \
                 .format(monthlyBudget=account.monthlyBudget, \
-                        monthlySoFar=account.monthlySoFar)
+                        monthlySoFar=account.monthlySoFar, \
+                        rentPercent=account.getRentPercent(), \
+                        foodPercent=account.getFoodPercent(), \
+                        billsPercent=account.getBillsPercent(), \
+                        transportPercent=account.getTransportPercent(), \
+                        miscPercent=account.getMiscPercent())
 
     # udpate budgets
     @app.route("/update")
