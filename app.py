@@ -37,7 +37,8 @@ def main():
         return open("./static/user.html") \
                 .read() \
                 .format(monthlyBudget=account.monthlyBudget, \
-                        monthlySoFar=account.monthlySoFar)
+                        monthlySoFar=account.monthlySoFar, \
+                        var2=23)
 
     # udpate budgets
     @app.route("/update")

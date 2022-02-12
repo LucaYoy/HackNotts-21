@@ -1,4 +1,10 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body {
+	min-height: 100vh;
 	background: linear-gradient(120deg,yellow,orange);
 }
 
@@ -6,4 +12,20 @@ h2 {
 	display: inline;
 	margin: 0;
 	padding: 0;
+}
+
+.money-section {
+	margin-left: 40vw ;
+	min-height: 40vh;
+	margin-top: 10vh;
+}
+
+.necessities  {
+	margin-left: 20px;
+	min-height: 40vh;
+}
+
+.progress {
+	max-width: 40vw;
+	margin: 0;
 }
