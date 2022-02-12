@@ -48,7 +48,7 @@ def main():
     # udpate variables
     @app.route("/update")
     def updateAccountBudget():
-        pass
+        return open("./static/home.html").read()
 
     app.run()
 
