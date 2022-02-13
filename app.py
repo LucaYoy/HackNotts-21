@@ -13,15 +13,14 @@ def main():
 
     # login page
     @app.route("/", methods=['GET', 'POST'])
-    @app.route("/goToLogin", methods=['GET', 'POST'])
     def returnLoginPage():
-        userName = request.form.get("username")
+        username = request.form.get("username")
+        password = request.form.get("password")
 
-        print("[debug] user name inputted: {}".format(userName))
-
-        if userName == ADMIN_USER_NAME:
+        # a quick implementation of the login system for the demo (password can be empty)
+        if username == ADMIN_USER_NAME:
             return redirect("http://127.0.0.1:5000/admin", code=302) # local host for the demo
-        elif userName == USER_USER_NAME:
+        elif username == USER_USER_NAME:
             return redirect("http://127.0.0.1:5000/user", code=302)
 
         return open("./static/home.html").read()
@@ -45,9 +44,6 @@ def main():
                         billsPercent=account.getBillsPercent(), \
                         transportPercent=account.getTransportPercent(), \
                         miscPercent=account.getMiscPercent())
-
-    def isNotString(number):
-        return type(number) != str
 
     # udpate budgets
     @app.route("/update")
@@ -73,6 +69,10 @@ def main():
 
         return redirect("http://127.0.0.1:5000/", code=302)
 
+    # take the user back to the login page
+    @app.route("/goToLogin", methods=['GET', 'POST'])
+    def goToLoginPage():
+        return redirect("http://127.0.0.1:5000/", code=302)
 
     # progress bar test
     @app.route("/test")
