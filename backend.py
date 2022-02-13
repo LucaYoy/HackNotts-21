@@ -2,22 +2,22 @@
 
 class Account:
 
-    monthlyBudget = 0.1 # total budget per month
+    monthlyBudget = 1000 # total budget per month
     monthlySoFar = 0
 
-    rentBudget = 0.2 * monthlyBudget
+    rentBudget = 0.5 * monthlyBudget
     rentSoFar = 0
 
     foodBudget = 0.2 * monthlyBudget
     foodSoFar = 0
 
-    billsBudget = 0.2 * monthlyBudget # gas, electricity, internet, phone, etc.
+    billsBudget = 0.1 * monthlyBudget # gas, electricity, internet, phone, etc.
     billsSoFar = 0
 
-    transportBudget = 0.2 * monthlyBudget
+    transportBudget = 0.1 * monthlyBudget
     transportSoFar = 0
 
-    miscBudget = 0.2 * monthlyBudget # subscriptions, etc.
+    miscBudget = 0.1 * monthlyBudget # subscriptions, etc.
     miscSoFar = 0
 
     warningThreshold = 0.9
