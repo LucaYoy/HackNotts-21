@@ -13,13 +13,14 @@ def main():
 
     # login page
     @app.route("/", methods=['GET', 'POST'])
+    @app.route("/goToLogin", methods=['GET', 'POST'])
     def returnLoginPage():
         userName = request.form.get("username")
 
         print("[debug] user name inputted: {}".format(userName))
 
         if userName == ADMIN_USER_NAME:
-            return redirect("http://127.0.0.1:5000/admin", code=302)
+            return redirect("http://127.0.0.1:5000/admin", code=302) # local host for the demo
         elif userName == USER_USER_NAME:
             return redirect("http://127.0.0.1:5000/user", code=302)
 
@@ -79,7 +80,6 @@ def main():
         return open("./static/progress_bar.html") \
                 .read() \
                 .format(var2=80)
-        pass
 
     app.run()
 
