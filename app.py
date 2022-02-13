@@ -57,19 +57,19 @@ def main():
             account.resetEachBudget()
 
         if request.args.get("rent") != "":
-            account.rentSoFar = float(request.args.get("rent"))
+            account.rentSoFar += float(request.args.get("rent"))
         
         if request.args.get("food") != "":
-            account.foodSoFar = float(request.args.get("food"))
+            account.foodSoFar += float(request.args.get("food"))
         
         if request.args.get("bills") != "":
-            account.billsSoFar = float(request.args.get("bills"))
+            account.billsSoFar += float(request.args.get("bills"))
         
         if request.args.get("transport") != "":
-            account.transportSoFar = float(request.args.get("transport"))
+            account.transportSoFar += float(request.args.get("transport"))
         
         if request.args.get("misc") != "":
-            account.miscSoFar = float(request.args.get("misc"))
+            account.miscSoFar += float(request.args.get("misc"))
 
         return redirect("http://127.0.0.1:5000/", code=302)
 
