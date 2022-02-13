@@ -1,6 +1,6 @@
 # Awesome Wallet
 
-An online budget-logger for those who find managing their (monthly) budget hard.
+A simple online budget-logger for those who find managing their (monthly) budget hard.
 
 ## 1. How to Run
 1. Run app.py ```python3 app.py```
@@ -8,7 +8,7 @@ An online budget-logger for those who find managing their (monthly) budget hard.
 3. Login with the demo accounts ```ID: admin1, PW: 123``` or ```ID: user1, PW: 321``` (see Section 2)
 
 ## 2. Motivation
-Some people, maybe kids, people with disabilities or the elders, may find it hard to manage or understand their spending habbits. The website povides budget managing and visualisation features for the user. One account is devided into the dmin page and the user page, so that their parents or cares can acceess the admin page to update the monthly budget. The inputted data is then visualised on the user page so that it is easier to see their monthly expences.
+Some people, maybe kids, people with disabilities or the elders, may find it hard to manage or understand their spending habbits. The website povides budget managing and visualisation features for the user. One account is divided into the admin page and the user page, so that their parents or cares can acceess the admin page to update the monthly budget. The inputted data is then visualised on the user page so that it is easier to see their monthly expenses.
 
 ## 3. Key Features
 - Login page that takes you to the admin or the user page depending on the account.
