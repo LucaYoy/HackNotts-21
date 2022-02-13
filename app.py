@@ -30,7 +30,7 @@ def main():
     def returnAdminPage():
         return open("./static/admin.html") \
                 .read() \
-                .format(monthlySoFar=account.monthlySoFar)
+                .format(monthlySoFar=account.getMonthlySoFar())
 
     # user page
     @app.route("/user")
