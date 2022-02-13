@@ -17,7 +17,7 @@ def main():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        # a quick implementation of the login system for the demo (password can be empty)
+        # a quick implementation of the login system for the demo
         if username == ADMIN_USER_NAME:
             return redirect("http://127.0.0.1:5000/admin", code=302) # local host for the demo
         elif username == USER_USER_NAME:
