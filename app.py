@@ -29,7 +29,8 @@ def main():
     @app.route("/admin")
     def returnAdminPage():
         return open("./static/admin.html") \
-                .read()
+                .read() \
+                .format(monthlySoFar=account.monthlySoFar)
 
     # user page
     @app.route("/user")
@@ -52,6 +53,7 @@ def main():
     def updateAccountBudget():
         if request.args.get("monthly-budget") != "":
             account.monthlyBudget = float(request.args.get("monthly-budget"))
+            account.resetEachBudget()
         
         if request.args.get("balance") != "":
             account.monthlySoFar = float(request.args.get("balance"))

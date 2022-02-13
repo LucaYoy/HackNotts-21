@@ -26,20 +26,27 @@ class Account:
         pass
 
     def getRentPercent(self):
-        return (self.rentSoFar / self.rentBudget) * 100
+        return int(100 * self.rentSoFar / self.rentBudget)
 
     def getFoodPercent(self):
-        return (self.foodSoFar / self.foodBudget) * 100
+        return int(100 * self.foodSoFar / self.foodBudget)
 
     def getBillsPercent(self):
-        return (self.billsSoFar / self.billsBudget) * 100
+        return int(100 * self.billsSoFar / self.billsBudget)
 
     def getTransportPercent(self):
-        return (self.transportSoFar / self.transportBudget) * 100
+        return int(100 * self.transportSoFar / self.transportBudget)
 
     def getMiscPercent(self):
-        return (self.miscSoFar / self.miscBudget) * 100
+        return int(100 * self.miscSoFar / self.miscBudget)
 
     def getMonthlySoFar(self):
         return self.monthlyBudget - self.rentSoFar - self.foodSoFar - self.billsSoFar - self.transportSoFar - self.miscSoFar
+
+    def resetEachBudget(self):
+        self.rentBudget = 0.2 * self.monthlyBudget
+        self.foodBudget = 0.2 * self.monthlyBudget
+        self.billsBudget = 0.2 * self.monthlyBudget
+        self.transportBudget = 0.2 * self.monthlyBudget
+        self.miscBudget = 0.2 * self.monthlyBudget
     
