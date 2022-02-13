@@ -10,9 +10,26 @@ body {
 	min-height: 100vh;
 }
 
+h2 {
+	margin: 15px 0 15px 0;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 2.5rem;
+	font-style: italic;
+	font-weight: bold;
+}
+
 div {
 	padding: 10px;
 	font-size: 2.5rem;
+}
+
+.necessities {
+	margin-top: 20px;
+}
+
+.rent-input, .bills-input, .transport-input, .misc-input, .food-input {
+	padding-left: 0;
 }
 
 label[for="monthly-budget"] {
@@ -22,6 +39,8 @@ label[for="monthly-budget"] {
 .monthly-budget-input {
 	display: flex;
 	align-items: start;
+	border-bottom: 3px dotted black;
+	padding-bottom: 5px;
 }
 
 input {

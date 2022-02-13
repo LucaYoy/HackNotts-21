@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Admin page</title>
-	<link rel="stylesheet" type="text/css" href="./stylesAdmin.css">
+	<link rel="stylesheet" type="text/css" href="./static/stylesAdmin.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ubuntu&display=swap" rel="stylesheet">
@@ -18,25 +18,30 @@
 			<label for="monthly-budget">Set Monthly Budget:</label>
 			<input type="number" name="monthly-budget" id="monthly-budget">
 		</div>
-		<div class="rent-input">
-			<label for="rent">Rent:</label>
-			<input type="number" name="rent" id="rent">
-		</div>
-		<div class="food-input">
-			<label for="food">Food:</label>
-			<input type="number" name="food" id="food">
-		</div>
-		<div class="bills-input">
-			<label for="bills">Bills:</label>
-			<input type="number" name="bills" id="bills">
-		</div>
-		<div class="transport-input">
-			<label for="transport">Transport:</label>
-			<input type="number" name="transport" id="transport">
-		</div>
-		<div class="misc-input">
-			<label for="misc">Misc:</label>
-			<input type="number" name="misc" id="misc">
+
+		<h2>Add Expenses</h2>
+
+		<div class = necessities>
+			<div class="rent-input">
+				<label for="rent">Rent:</label>
+				<input type="number" name="rent" id="rent">
+			</div>
+			<div class="food-input">
+				<label for="food">Food:</label>
+				<input type="number" name="food" id="food">
+			</div>
+			<div class="bills-input">
+				<label for="bills">Bills:</label>
+				<input type="number" name="bills" id="bills">
+			</div>
+			<div class="transport-input">
+				<label for="transport">Transport:</label>
+				<input type="number" name="transport" id="transport">
+			</div>
+			<div class="misc-input">
+				<label for="misc">Misc:</label>
+				<input type="number" name="misc" id="misc">
+			</div>
 		</div>
 		<input type="submit" name="">
 
