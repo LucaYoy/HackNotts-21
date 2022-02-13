@@ -54,9 +54,6 @@ def main():
         if request.args.get("monthly-budget") != "":
             account.monthlyBudget = float(request.args.get("monthly-budget"))
             account.resetEachBudget()
-        
-        if request.args.get("balance") != "":
-            account.monthlySoFar = float(request.args.get("balance"))
 
         if request.args.get("rent") != "":
             account.rentSoFar = float(request.args.get("rent"))
