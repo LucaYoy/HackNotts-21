@@ -12,12 +12,14 @@ Some people, maybe kids, people with disabilities or the elders, may find it har
 
 ## 3. Key Features
 - Login page that takes you to the admin or the user page depending on the account.
-- The admin can set the total monthly budget and update the balance.
+- The admin can set the total monthly budget (balance)
+- Admin can then log out the expenditures of the user under the relevant categories
+- The user can spend as much as 20% of the total balance on each category (e.g food)
 - The user can check their balance for each category (food, transport, etc.) on the user page.
-- The user page displays progress bars for each category for visualisation.
+- The user page displays progress bars (showing how much of the 20% of the total balance is still available to spend on that catrogry) for visualisation.
+- For example, if the total balance is set to 200, the user can spend a maximum of 20% of 200 = 40 on each category. Let us say that after certain amount of days the user spend 30 on food, then the user page will show a 75% filled bar for the food category (30/40 = 0.75). 
 
 ## 4. Possible Future Improvements
 - A feature where the user can suggest updates to their budget, which can be approved by the admin.
-- A virtual bank account to demonstrate live changes to the wallet. The balance and the money spent/amount left over shown in the "progress bar" should change accordingly.
 - Smarter progress bars, e.g., negative balance, changing colour, animations.
 - A better and secure login system.
